@@ -2,15 +2,23 @@ const { species } = require('../data/zoo_data');
 const data = require('../data/zoo_data');
 
 function getSpeciesByIds(...ids) {
-  if (ids === '') {
-    const emptyArr = [];
-    return emptyArr;
-  }
+  const arrSpecies = [];
 
-  return ids.forEach((elemId) => species.find((specie) => specie.id === elemId));
+  arrSpecies.push(ids.forEach((elemId) => species.find((specie) => specie.id === elemId)));
+
+  return arrSpecies;
+
+  // const arrIds = [];
+  // ids.forEach((elemId) => arrIds.push(elemId));
+
+  // return arrIds;
 }
 
 module.exports = getSpeciesByIds;
 
+// TESTS
+
+// console.log(getSpeciesByIds());
+// console.log(getSpeciesByIds('0938aa23-f153-4937-9f88-4858b24d6bce'));
 // eslint-disable-next-line max-len
-console.log(getSpeciesByIds());
+console.log(getSpeciesByIds('0938aa23-f153-4937-9f88-4858b24d6bce', '533bebf3-6bbe-41d8-9cdf-46f7d13b62ae'));
