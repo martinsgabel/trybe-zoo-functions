@@ -5,12 +5,11 @@ function getEmployeeByName(...employeeName) {
   // seu código aqui
   const employeeS = [];
 
-  // eslint-disable-next-line max-len
-  employees.find((employee) => employee.firstName === employeeName || employee.lastName === employeeName);
+  employeeName.forEach((empName) => employeeS.push(employees.filter((employee) => employee.firstName === empName || employee.lastName === empName)));
 
   return employeeS;
 }
 
 module.exports = getEmployeeByName;
 
-console.log(getEmployeeByName('Burl'));
+console.log(getEmployeeByName('Burl', 'Nelson'));
