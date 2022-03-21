@@ -4,7 +4,7 @@ const data = require('../data/zoo_data');
 function getSpeciesByIds(...ids) {
   const arrSpecies = [];
 
-  arrSpecies.push(ids.forEach((elemId) => species.find((specie) => specie.id === elemId)));
+  ids.forEach((elemId) => arrSpecies.push(species.find((specie) => specie.id === elemId)));
 
   return arrSpecies;
 }
