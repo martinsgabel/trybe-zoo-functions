@@ -10,20 +10,6 @@ function countAnimals(...animal) {
     }, {});
     return listAnimals;
   }
-
-  if (animal.length < 2) {
-    // retorna NÚMERO
-    console.log(animal); // [ { specie: 'penguins' } ]
-
-    // const { residents } = species;
-    // const specie = animal.value;
-    // console.log(specie);
-    // const listAnimals = specie.reduce((acc, currentValue) => {
-    //   acc[currentValue.name] = currentValue.residents.length;
-    //   return acc;
-    // });
-    // return listAnimals;
-  }
 }
 
 module.exports = countAnimals;
