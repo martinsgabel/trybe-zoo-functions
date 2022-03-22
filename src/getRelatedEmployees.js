@@ -4,7 +4,7 @@ function isManager(id) {
   // verificar se é gerente, retorno bool
   const { employees } = data;
 
-  const isMang = employees.some((employee) => employee.managers === id);
+  const isMang = employees.some((employee) => employee.managers.includes(id));
 
   return isMang;
 }
