@@ -4,9 +4,9 @@ function isManager(id) {
   // verificar se é gerente, retorno bool
   const { employees } = data;
 
-  const findEmp = employees.filter((employee) => employee.id === id).firstName;
+  const isMang = employees.some((employee) => employee.managers === id);
 
-  return findEmp;
+  return isMang;
 }
 
 function getRelatedEmployees(managerId) {
@@ -16,4 +16,4 @@ function getRelatedEmployees(managerId) {
 
 module.exports = { isManager, getRelatedEmployees };
 
-console.log('56d43ba3-a5a7-40f6-8dd7-cbb05082383f');
+console.log(isManager('56d43ba3-a5a7-40f6-8dd7-cbb05082383f'));
