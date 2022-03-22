@@ -9,10 +9,11 @@ function countAnimals(...animal) {
       return acc;
     }, {});
     return listAnimals;
+  } if (animal.length < 2) {
+    console.log(animal);
   }
 }
 
 module.exports = countAnimals;
 
-console.log(countAnimals());
 console.log(countAnimals({ specie: 'penguins' }));
