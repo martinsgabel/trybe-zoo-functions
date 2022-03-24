@@ -3,13 +3,14 @@ const data = require('../data/zoo_data');
 
 function getAnimalMap(options) {
   // seu código aqui
-  if (!options) {
-    const list = species.reduce((acc, currentValue) => {
-      acc[currentValue.location] = currentValue.name;
+  const locais = species.reduce((acc, curr) => {
+    if (!acc.includes(curr.location)) {
+      acc.push(curr.location);
       return acc;
-    }, {});
-    return list;
-  }
+    } return acc;
+  }, {});
+
+  return locais;
 }
 
 module.exports = getAnimalMap;
