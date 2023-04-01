@@ -41,7 +41,3 @@ function getSchedule(scheduleTarget) {
 }
 
 module.exports = getSchedule;
-
-// console.log(getSchedule());
-// console.log(getSchedule('Tuesday'));
-console.log(getSchedule('lions'));
